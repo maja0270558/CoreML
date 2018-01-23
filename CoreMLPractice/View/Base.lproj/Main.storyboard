@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--What this-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLPractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,21 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4n9-7g-tuy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="8" y="144" width="359" height="379"/>
                                 <viewLayoutGuide key="safeArea" id="K3X-bv-8EY"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please take a photo to detect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCL-gv-L4W">
+                                <rect key="frame" x="16" y="545" width="343" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4n9-7g-tuy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BSH-3C-m1M"/>
-                            <constraint firstItem="4n9-7g-tuy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FhE-yQ-mmd"/>
-                            <constraint firstItem="4n9-7g-tuy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HWA-hN-tnI"/>
-                            <constraint firstItem="4n9-7g-tuy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="l1v-lP-fU8"/>
+                            <constraint firstItem="4n9-7g-tuy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="8NU-YQ-ePX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4n9-7g-tuy" secondAttribute="trailing" constant="8" id="Ano-z1-EAT"/>
+                            <constraint firstItem="cCL-gv-L4W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JiI-FU-M9d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cCL-gv-L4W" secondAttribute="trailing" constant="16" id="QIS-ub-qef"/>
+                            <constraint firstItem="4n9-7g-tuy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="QUy-IF-3fJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cCL-gv-L4W" secondAttribute="bottom" constant="20" id="WjT-6M-COj"/>
+                            <constraint firstItem="cCL-gv-L4W" firstAttribute="top" secondItem="4n9-7g-tuy" secondAttribute="bottom" constant="22" id="eKl-3C-Baz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4n9-7g-tuy" secondAttribute="bottom" constant="144" id="jn7-Lz-SLB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JDF-XC-Yb5">
+                    <navigationItem key="navigationItem" title="What this" id="JDF-XC-Yb5">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="68C-uG-AuF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cameraBtnClick:" destination="BYZ-38-t0r" id="aq6-9s-Az6"/>
                             </connections>
@@ -41,6 +52,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="4n9-7g-tuy" id="0gy-7b-pv6"/>
+                        <outlet property="itemLabel" destination="cCL-gv-L4W" id="d7o-Zb-sAX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,9 +64,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QaX-Ll-JW9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JLq-jz-bRs">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JLq-jz-bRs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="29"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
