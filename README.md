@@ -1,4 +1,4 @@
 
 CoreML
 
-![image](https://media.giphy.com/media/26CaN5f2PvIoVZUZO/giphy.gif)
+![image](https://github.com/maja0270558/CoreML/blob/master/coreml2.gif)
